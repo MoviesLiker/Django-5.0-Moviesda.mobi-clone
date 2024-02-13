@@ -1,0 +1,9 @@
+{% extends "app.html" %} {% load static %}{% block continer %}
+<div class="line">Tamil Movies</div>
+
+{% for x in category %}
+<div class="f">
+  <img src="{% static 'img/dir.gif' %}" alt="[+]" />
+  <a href="{% url 'list' x.id %}">{{x.category}}</a>
+</div>
+{% endfor %} {% endblock %}

@@ -1,0 +1,28 @@
+{% extends "app.html" %} {% load static %}{% block continer %}
+
+<div class="line">{{movie.name}} ({{ movie.quality }})</div>
+
+{% for video in videos %}
+<div class="f">
+  <table cellspacing="0">
+    <tr>
+      <td class="tblimg">
+        <img
+          src="{{video.screenshot}}"
+          alt="{{video.file_name}}"
+          width="95"
+          height="50"
+        />
+      </td>
+      <td class="left">
+        <img src="{%static 'img/fivestars.gif'%}" /> <br />
+        <a href="{% url 'download' video.id %}">
+          <font color="green">{{video.file_name}}</font>
+        </a>
+        <br />
+        Size : {{video.file_size}}
+      </td>
+    </tr>
+  </table>
+</div>
+{% endfor %} {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "app.html" %} {% load static %}{% block continer %}
+<div class="line">{{category.category}}</div>
+
+{% for movie in movies %}
+<div class="f">
+  <img src="{% static 'img/dir.gif' %}" alt="[+]" />
+  <a href="{% url 'movie' movie.id %}">{{movie.name}} ({{ movie.year }})</a>
+</div>
+<div class="isaiminida" align="left">
+  Pages: <span class="pagination_current">1</span> |
+  <a href="/tamil-2024-movies/?page=2" title="Page 2">2</a> |
+  <a href="/tamil-2024-movies/?page=3" title="Page 3">3</a> |
+  <a href="/tamil-2024-movies/?page=4" title="Page 4">4</a> |
+  <a href="/tamil-2024-movies/?page=2" class="pagination_next"></a>
+</div>
+{% endfor %} {% endblock %}

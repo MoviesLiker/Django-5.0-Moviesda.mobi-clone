@@ -1,0 +1,96 @@
+{% extends "app.html" %} {% load static %}{% block continer %}
+
+<div class="line">Movie Information</div>
+<div class="isai" align="left">
+  <div class="pr">
+    <img
+      style="margin-left: 7px"
+      typeof="foaf:Image"
+      src="{{ movie.poster }}"
+      width="153px"
+      height="auto"
+      alt="{{movie.name}} ({{movie.year}})"
+      title="{{movie.name}} ({{movie.year}})"
+      class="tbl"
+    />
+    <table cellspacing="5">
+      <tr>
+        <td><b>Movie</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.name}} ({{movie.year}})</td>
+      </tr>
+
+      <tr>
+        <td><b>Director</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.director}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Starring</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.starring}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Genres</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.genres}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Quality</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.quality}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Language</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.language}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Rating</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.rating}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Release Date</b></td>
+        <td><b>:</b></td>
+        <td>{{movie.release_date}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Share To</b></td>
+        <td><b>:</b></td>
+        <td>
+          <a href=""
+            ><img
+              src="http://moviesda9.com/img/facebook.png"
+              width="12"
+              height="12"
+              alt="Facebook"
+          /></a>
+
+          <a href=""
+            ><img
+              src="http://moviesda9.com/img/twitter.png"
+              width="12"
+              height="12"
+              alt="Twitter"
+          /></a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="line">{{movie.name}} ({{movie.year}})</div>
+
+<div class="f">
+  <img src="{% static 'img/dir.gif' %}" alt="[+]" />
+  <a href="{% url 'video' movie.id %}">{{movie.name}} ({{ movie.quality }})</a>
+</div>
+
+{% endblock %}

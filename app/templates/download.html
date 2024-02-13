@@ -1,0 +1,34 @@
+{% extends "app.html" %} {% load static %}{% block continer %}
+
+<div class="line">Video Information</div>
+
+<div class="bf">
+  <div class="songinfo">
+    <div class="albumcover">
+      <img src="{{video.screenshot}}" width="150" height="100" />
+    </div>
+
+    <div class="details"><strong>File Name:</strong> {{video.file_name}}</div>
+    <div class="details"><strong>File Size:</strong> {{video.file_size}}</div>
+    <div class="details"><strong>Video Size:</strong> {{video.video_size}}</div>
+    <div class="details"><strong>Format:</strong> {{video.format}}</div>
+    <div class="details"><strong>Duration:</strong> {{video.duration}}</div>
+    <div class="details"><strong>Added On:</strong> {{video.add_on}}</div>
+
+    <div class="download">
+      <div class="dlink">
+        <a rel="noreferrer nofollow noopener" href="{{video.server1}}"
+          >Download Server 1</a
+        >
+      </div>
+
+      <div class="dlink">
+        <a rel="noreferrer nofollow noopener" href="{{video.server2}}"
+          >Download Server 2</a
+        >
+      </div>
+
+      {% endblock %}
+    </div>
+  </div>
+</div>

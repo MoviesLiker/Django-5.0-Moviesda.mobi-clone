@@ -15,8 +15,9 @@ This project is a clone of the popular website Moviesda.mobi, built using Django
 ## Installation:
 
 1. Clone the repository: `git clone https://github.com/MoviesLiker/Django-5.0-Moviesda.mobi-clone.git`
-2. Run migrations: `python manage.py migrate`
-3. Start the development server: `python manage.py runserver`
+2. Config database `https://docs.djangoproject.com/en/5.0/ref/settings/#databases`
+3. Run migrations: `python manage.py migrate`
+4. Start the development server: `python manage.py runserver`
 
 ## Contributing:
 
